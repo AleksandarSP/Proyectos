@@ -1,0 +1,122 @@
+@media screen and (max-width: 600px){
+	
+*{
+	margin: 0%;
+	padding: 0%;
+}
+
+
+
+
+section{
+	margin-left: 6%;
+	margin-right: 6%;
+}
+#publi{ /*margenes publicidad y footer al 0 prk me lo desborda*/
+	margin: 0%;
+}
+#margenes{
+	margin-left: 6%;
+	margin-right: 6%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+
+
+
+
+#logo img{
+	width: 100%;
+}	
+#iconos{
+	display: none;
+}
+#movimiento{
+	display: none;
+}
+#add{
+	display: none;
+}
+#principal{
+	width: 100%;
+	font-size: 1.8em;
+	line-height: 1em;
+}
+#libro{
+	width: 100%;
+}
+#secciones{
+	width: 100%;
+}
+#secciones figcaption{
+	width: 100%;
+}
+#subseccion{
+	width: 100%;
+}
+.submage{
+	width: 20%;
+}
+.submage img{
+	width: 100%;
+}
+.cuadro{
+	margin-bottom: 1em;
+}
+.subtext{
+	font-size: 1.1em;
+	font-weight: bold;
+}
+#flotante{
+	width: 100%;
+	height: 23%;
+	margin-bottom: 2em;
+}
+
+#conjunto figure{
+	width: 100%;
+	margin-bottom: 1.2em;
+}
+#publi{
+	margin-bottom: 2em;
+}
+#ampliacion figure{
+	width: 100%;
+	margin-bottom: 2em;
+}
+#otrasfig figure{
+	width: 100%;
+	margin-bottom: 2em;
+}
+footer{
+	display: flex;
+	flex-wrap: wrap;
+}
+#loguito{
+	width: 100%;
+	display: flex;
+	align-content: center;
+	justify-content: space-around;
+	margin-bottom: 6em;
+}
+#loguito img{
+	width: 45%;
+}
+#mail{
+	width: 100%;
+}
+#ics{
+	margin-top: 6em;
+	width: 50%;
+	align-self: center;
+
+}
+
+
+
+
+
+
+}
