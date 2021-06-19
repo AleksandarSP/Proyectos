@@ -1,0 +1,29 @@
+
+
+nav{
+    background: black;
+    list-style: none;
+    color: white;
+    border-bottom: solid white;
+    
+    /* height: 5rem; */
+/*     font-size: 2vw;
+    font-size: 1vmax; */
+    font-size: 1.5vmin;
+}
+nav:hover{
+    border-color: rgb(214, 255, 33);
+}
+nav li a:hover{
+    color: rgb(214, 255, 33);
+}
+a{
+    color: inherit
+}
+span{
+    color: white
+}
+
+/* nav li{
+    margin-left: 4vw;
+} */

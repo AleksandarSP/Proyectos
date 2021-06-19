@@ -1,0 +1,8 @@
+
+.main{
+    height: 100%; 
+    padding-top: 10vw;
+    background: linear-gradient(rgba(0, 0, 0, 0.39), rgba(61, 26, 126, 0.39)), url(../../../assets/img/external_page/back.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+}

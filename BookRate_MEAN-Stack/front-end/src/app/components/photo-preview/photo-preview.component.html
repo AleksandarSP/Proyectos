@@ -1,0 +1,68 @@
+<div class="container-fluid main">
+
+    <div class="container py-5">
+        <div class="row" *ngIf="!photo; else main_content">
+            <h1>loading...</h1>
+        </div>
+
+        <ng-template #main_content>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img [src]="'http://localhost:4000/' + photo.imagePath" class="img-fluid" alt="">
+                    </div>
+
+                    <div>
+                        <H2 class="w-100 vote-count text-center my-4">RATING: {{voteCount}}</H2>
+                        <button class="col-12 btn btn-outline-success my-1" (click)="upvote()">UPVOTE</button>
+                        <button class="col-12 btn btn-outline-danger" (click)="downvote()">DOWNVOTE</button>
+                    </div>
+                </div>
+        
+                <div class="col-md-8">
+                    <div class="card">
+                        <form class="card-body">
+        
+                            <div>
+                                <p class="content-head">Title:</p>
+                                <h2>{{photo.title}}</h2>
+                            </div>
+                            <hr>
+                            <div>
+                                <p class="content-head">Descripion:</p>
+                                <p>{{photo.description}}</p>
+                            </div>
+                            <hr>
+                            <div>
+                                <p class="content-head">Genre:</p>
+                                <p>{{photo.genre}}</p>
+                            </div>
+        
+                        </form>
+                    </div>
+
+
+                    <div class="comment-container">
+                <form (ngSubmit)="addComment()">
+                    
+                        
+                        <input class="col-12 input text-center" type="text" placeholder="Add Comment" [(ngModel)]="commentInput" name="commentInput" required>
+                        
+                        <button type="submit" class="w-100 my-2 btn-success">Submit</button>
+                    
+                </form>
+
+            
+                <div *ngFor="let item of comments; let i=index" class="row p-2 justify-content-center d-flex">
+                    <p class="text-left col-4 com-1"><strong>User:</strong> {{item.user}}</p>
+                    <p class="text-left col-4 com-2"><strong>Coment:</strong> {{item.comment}}</p>
+                    <div class="w-100 hr"></div>
+                </div>
+            </div>
+                </div>
+            </div>
+
+        </ng-template>
+    </div>
+</div>
+

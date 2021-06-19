@@ -1,0 +1,8 @@
+footer{
+    background-color: rgb(36, 36, 36);
+    clear: both;
+    position: relative;
+    bottom: 0;
+    height: 10vw;
+    /* height: 200px; */
+}

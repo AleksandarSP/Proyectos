@@ -1,0 +1,22 @@
+
+.main{
+    height: 100%; 
+    padding-top: 10vw;
+    background: linear-gradient(rgba(0, 0, 0, 0.39), rgba(61, 26, 126, 0.39)), url(../../../assets/img/external_page/back.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+h2{
+    font-size: 2vw;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-bottom: 2rem;
+    color: rgb(255, 255, 255);
+  }
+.photo-title{
+    color:rgba(137, 208, 255, 0.609)
+}
+.photo-title:hover{
+    color:rgba(215, 239, 255, 0.835);
+    cursor: pointer;
+}

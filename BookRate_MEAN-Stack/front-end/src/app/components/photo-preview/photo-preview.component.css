@@ -1,0 +1,35 @@
+
+.main{
+    min-height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.39), rgba(61, 26, 126, 0.39)), url(../../../assets/img/external_page/back.gif);
+    background-size: cover;
+    background-attachment: fixed;
+
+    background-repeat: no-repeat;
+}
+.vote-count{
+    color: rgb(214, 255, 33);;
+    border-bottom: solid rgb(214, 255, 33);
+}
+
+.comment-container{
+    background-color: rgba(56, 56, 56, 0.568);
+    margin-top: 2rem;
+
+}
+.com-1{
+    color: rgb(255, 0, 242)
+}
+.com-2{
+    color: rgb(128, 212, 226)
+}
+.comment-container > hr{
+    color: white;   
+}
+.hr{
+    border-bottom: solid rgba(231, 231, 231, 0.61);
+    border-bottom-width: 1px;
+}
+hr{
+    color: white;
+}

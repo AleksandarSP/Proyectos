@@ -1,0 +1,65 @@
+<nav class="navbar navbar-expand-lg container-fluid">
+    <a class="col-2 navbar-brand" href="#">BookRate</a>
+    <button class="col-2 navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon bg-white"></span>
+    </button>
+    <div class="col-8 collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+      <ul class="navbar-nav text-center">
+        
+        <ng-container *ngIf="authService.loggedIn();">
+
+        <li class="nav-item">
+          <a class="nav-link" [routerLink] = "['home']" routerLinkActive="active">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/genre']" routerLinkActive="router-link-active"  href="#">Library</a><!-- GENRE-->
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" [routerLink] = "['my-reading']" routerLinkActive="active">My-Reading</a>
+        </li>
+
+
+      </ng-container>
+
+      <ng-container *ngIf="authService.adminLoggedIn();">
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/photos']" routerLinkActive="router-link-active"  href="#">Books</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/photos/new']" routerLinkActive="router-link-active"  href="#">Upload Book</a>
+        </li>
+
+      </ng-container>
+
+        <ng-container *ngIf="!authService.loggedIn(); else loggedIn">
+          <li class="nav-item">
+            <a class="nav-link" routerLink = "/signin" routerLinkActive = "active">SignIn</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink = "/signup" routerLinkActive = "active">SignUp</a>
+          </li>
+        </ng-container>
+  
+        <ng-template #loggedIn>
+
+          <li class="nav-item dropdown">
+            <li class="nav-ite">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Account
+              </a>
+              
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" style="cursor: pointer;" (click)="authService.logout()">Logout</a>
+              </div>
+            </li>
+        </ng-template>
+        
+
+
+      </ul>
+    </div>
+  </nav>
+  

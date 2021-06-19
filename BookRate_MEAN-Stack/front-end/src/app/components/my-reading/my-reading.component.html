@@ -1,0 +1,74 @@
+<div class="container-fluid main">
+    <div class="row justify-content-around ">
+        <h2>My Reading</h2>
+        
+    </div>
+
+    <div class="row">
+        <div class="col-lg-4 offset-lg-4 insert-title">
+            <input type="text" [(ngModel)]="insertedBook" (keyup.enter)="insertBook($event.target.value)" class="form-control form-control-lg text-center" placeholder="Insert Book">
+        </div>
+    </div>
+
+
+    <div class="row d-flex justify-content-around">
+        <div class="col-4 book-containers">
+            <h3>Pending</h3>
+                <div cdkDropList class="list" id="list-pending" [cdkDropListData] = "pending" [cdkDropListConnectedTo] = "['list-reading', 'list-readed']" (cdkDropListDropped)="drop($event)"><!-- (cdkDropListDropped)="drop($event)" -->
+                    <div class="box col-3" *ngFor="let book of pending" cdkDrag>        
+                        <div class="card card-photo" (click)="selectedCard(book._id)">
+                            <div class="card-header text-center">
+                                {{book.title}}
+                            </div>
+                            <img [src]="'http://localhost:4000/' + book.imagePath" class="img-card w-100 img" alt="">
+                
+                            <div>
+                                {{book.description}}
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+
+        </div>
+
+        <div class="col-4 book-containers">
+            <h3>Reading</h3>
+            <div cdkDropList class="list d-flex" id="list-reading" [cdkDropListData] = "reading" [cdkDropListConnectedTo] = "['list-pending', 'list-readed']" (cdkDropListDropped)="drop($event)"><!-- (cdkDropListDropped)="drop($event)" -->
+                <div class="box col-3" *ngFor="let book of reading" cdkDrag>        
+                    <div class="card card-photo" (click)="selectedCard(book._id)">
+                        <div class="card-header text-center">
+                            {{book.title}}
+                        </div>
+                        <img [src]="'http://localhost:4000/' + book.imagePath" class="img-card w-100 img" alt="">
+            
+                        <div>
+                            {{book.description}}
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-4 book-containers">
+            <h3>Readed</h3>
+            <div cdkDropList class="list d-flex" id="list-readed" [cdkDropListData] = "readed" [cdkDropListConnectedTo] = "['list-reading', 'list-pending']" (cdkDropListDropped)="drop($event)"><!-- (cdkDropListDropped)="drop($event)" -->
+                <div class="box col-3" *ngFor="let book of readed" cdkDrag>        
+                    <div class="card card-photo" (click)="selectedCard(book._id)">
+                        <div class="card-header text-center">
+                            {{book.title}}
+                        </div>
+                        <img [src]="'http://localhost:4000/' + book.imagePath" class="img-card w-100 img" alt="">
+            
+                        <div>
+                            {{book.description}}
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+      
+</div>
